@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#coding=utf-8
+#encoding=utf-8
 #
 #
 #
@@ -26,19 +26,12 @@ jieba.analyse.set_stop_words("./Chinese-stop-words.txt")
 
 file_list = os.listdir(data_source_dir)
 for file in file_list:
-   # print file
-   if os.path.isfile(data_source_dir+file):
-        content = open(data_source_dir+file,"rb").read()
+    #print file
+    #print os.path.isfile(data_source_dir+file)
+    if os.path.isfile(data_source_dir+file):
+        content = codecs.open(data_source_dir+file,'rw','utf-8')
         for content_line in content:
-            print content_line > content_line+"1.txt"
+            #print content_line
 
-          #  seg_list = jieba.cut(content_line,cut_all=False)
-           # print " ".join(seg_list)
-
-
-
-
-
-
-
-
+            seg_list = jieba.cut(content_line,cut_all=False)
+            print " ".join(seg_list)
