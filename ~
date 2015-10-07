@@ -24,6 +24,7 @@ _get_abs_path = lambda path: os.path.normpath(os.path.join(os.getcwd, path))
 #    print USAGE
 #    sys.exit(1)
 DEFAULT_SOURCE_DIR = "./lily/"
+dict_list = []
 
 #step 1
 class Tokenizer():
@@ -31,7 +32,6 @@ class Tokenizer():
         self.data_source_dir = data_source_dir
         self.file_list = os.listdir(self.data_source_dir)
         self.post_pool = {}
-        self.dict_list = []
 
     def cut_all(self):
         for file in self.file_list:
@@ -49,58 +49,50 @@ class Tokenizer():
                 content.close()
         # 1630 post
         print len(self.post_pool)
-        self.dict_list = [key for key in jieba.dt.FREQ if not jieba.dt.FREQ[key] == 0]
-        print len(self.dict_list)
+        dict_list = [key for key in jieba.dt.FREQ if not jieba.dt.FREQ[key] == 0]
+        print len(dict_list)
 
 
 class KeywordExtrator(object):
     def __init__(self):
-        self.stop_words = []
+        self.set_stop_words = []
 
     def set_stop_words(self, stop_words_path):
         if not os.path.isfile(stop_words_path):
             raise Exception("Stop: stop word file does not exist")
         stop_content = codecs.open(stop_words_path,'rw','utf-8')
         for line in stop_content:
-            self.stop_words.append(line)
+            self.stop_words.add(line)
         stop_content.close()
 
 
 class TFIDF(KeywordExtrator):
-    def __init__(self,post_pool,stop_words_path,dict_list):
+    def __init__(self,post_pool,stop_words_path):
         KeywordExtrator.__init__(self)
         self.post_pool = post_pool
-        KeywordExtrator.set_stop_words(self,stop_words_path)
+        super.set_stop_words(stop_words_path)
         self.idf_freq = {}
         self.tf_freq = {}
-        self.dict_list = dict_list
         #jieba.dt.FREQ dict
 
     def remove_stop_words(self):
         for k,v in self.post_pool.items(): #k: file+post_index       v: token words list
-            words_list = [word for word in v if word not in self.stop_words]
-            self.post_pool[k] = words_list
+            words_list = [word for word in v if word not in self.set_stop_words]
+            self.post_pool[k] = word_list
 
     def get_tfidf(self):
         tf_idf = {}
         #Process every single post
-        print len(self.post_pool)
-        for k,v in self.post_pool.items():
-            print k
+        for k,v in self.post_pool:
             post_tfidf = {}
             word_counter = Counter(v) # get the TF
             #TF value prepared to be processed
-            print len(word_counter)
-            print len(self.dict_list)
-            for word in self.dict_list:
-                #    print word
+            for word in dict_list:
                 post_tfidf[word] = 0
-                for post_name, post_content in self.post_pool.items():
+                for post_name, post_content in self.post_pool:
                     if word in post_content:
                         post_tfidf[word] += 1 # get the N
-                post_tfidf[word] = word_counter.get(word,0.0)*math.log(len(self.post_pool)/(post_tfidf.get(word,0.0)+1.0))
-                if not post_tfidf[word]==0:
-                    print word+' '+str(post_tfidf[word])+'\n'
+                post_tfidf[word] = word_counter.get(word,0.0)*math.log(len(post_pool)/(post_tfidf(word,0.0)+1.0))
             tf_idf[k] = post_tfidf
         return tf_idf
 
@@ -109,13 +101,9 @@ class TFIDF(KeywordExtrator):
 g = Tokenizer()
 g.cut_all()
 
-tf_idf = TFIDF(g.post_pool,'./Chinese-stop-words.txt',g.dict_list)
+tf_idf = TFIDF(g.post_pool,'./Chinese-stop-words.txt')
 tf_idf.remove_stop_words()
 tf_idf.get_tfidf()
-#for k,v in tf_idf.get_tfidf().items():
-    #print 'File: '+k
- #   for word, value in v.items():
-  #      print word+' '+str(value)+'\n'
 
 
 
