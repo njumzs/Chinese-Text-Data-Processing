@@ -13,6 +13,8 @@ import math
 from optparse import OptionParser
 from collections import Iterable, Counter
 
+reload(sys)
+sys.setdefaultencoding('utf-8')
 USAGE = "usage: python test.py [file name]"
 
 parser = OptionParser(USAGE)
@@ -43,14 +45,14 @@ class Tokenizer():
                     #Every content_line represents a post
                     #get the cut list using jieba.lcut
                     #print content_line
-                    seg_list = jieba.lcut(content_line,cut_all=False)
+                    seg_list = jieba.lcut(content_line.strip(),cut_all=False)
                     post_index += 1
                     self.post_pool[file+'_'+str(post_index)] = seg_list
                 content.close()
         # 1630 post
-        print len(self.post_pool)
+        #print len(self.post_pool)
         self.dict_list = [key for key in jieba.dt.FREQ if not jieba.dt.FREQ[key] == 0]
-        print len(self.dict_list)
+        #print len(self.dict_list)
 
 
 class KeywordExtrator(object):
@@ -62,7 +64,7 @@ class KeywordExtrator(object):
             raise Exception("Stop: stop word file does not exist")
         stop_content = codecs.open(stop_words_path,'rw','utf-8')
         for line in stop_content:
-            self.stop_words.append(line)
+            self.stop_words.append(line.strip())
         stop_content.close()
 
 
@@ -73,49 +75,77 @@ class TFIDF(KeywordExtrator):
         KeywordExtrator.set_stop_words(self,stop_words_path)
         self.idf_freq = {}
         self.tf_freq = {}
+        self.dict_map = {}
         self.dict_list = dict_list
-        #jieba.dt.FREQ dict
 
     def remove_stop_words(self):
+        dict_set = set([])
         for k,v in self.post_pool.items(): #k: file+post_index       v: token words list
-            words_list = [word for word in v if word not in self.stop_words]
+            #print len(self.stop_words)
+            words_list = [word.strip() for word in v if word.strip() not in self.stop_words]
+           # print len(v)
+           # print len(words_list)
+            dict_set.update(words_list)
             self.post_pool[k] = words_list
+        self.dict_list = list(dict_set)
+        print 'dict_len'+str(len(self.dict_list))
 
-    def get_tfidf(self):
+    def __get_dict_map(self):
+        for i, value in enumerate(self.dict_list):
+            self.dict_map[value] = i
+
+
+    def __cal_tfidf(self):
         tf_idf = {}
         #Process every single post
-        print len(self.post_pool)
+        #print len(self.post_pool)
+        index = 0
+        word_tf = {}
         for k,v in self.post_pool.items():
-            print k
+            print str(index)+'/'+str(len(self.post_pool))+' is computing'
             post_tfidf = {}
             word_counter = Counter(v) # get the TF
             #TF value prepared to be processed
-            print len(word_counter)
-            print len(self.dict_list)
-            for word in self.dict_list:
+          #  print len(word_counter)
+            for word in word_counter:
                 #    print word
-                post_tfidf[word] = 0
-                for post_name, post_content in self.post_pool.items():
-                    if word in post_content:
-                        post_tfidf[word] += 1 # get the N
-                post_tfidf[word] = word_counter.get(word,0.0)*math.log(len(self.post_pool)/(post_tfidf.get(word,0.0)+1.0))
-                if not post_tfidf[word]==0:
-                    print word+' '+str(post_tfidf[word])+'\n'
+                #print word_tf.get(word,0)
+                if word_tf.get(word,0) == 0:
+                    word_tf[word] = 0
+                    for post_name, post_content in self.post_pool.items():
+                        if word in post_content:
+                            word_tf[word] += 1 # get the N
+                post_tfidf[word] = round(word_counter.get(word,0.0)*math.log(len(self.post_pool)/(word_tf.get(word,0.0)+1.0)),4)
+                #if not post_tfidf[word]==0:
+                 #   print word+' '+str(post_tfidf[word])
             tf_idf[k] = post_tfidf
+            index += 1
         return tf_idf
 
+    def get_sparse_tfidf(self):
+        self.__get_dict_map()
+        tf_idf = self.__cal_tfidf()
+        print 'cal tfidf over'
+        sparse_tf_idf = {}
+        for post_name, tfidf in tf_idf.items():
+            print post_name
+            word_tf_idf = {}
+            for word, value in tfidf.items():
+                word_tf_idf[self.dict_map.get(word,-1)] = value
+                print str(self.dict_map.get(word,-1))+' '+word+' '+str(value)
+            sparse_tf_idf[post_name] = word_tf_idf
+        return sparse_tf_idf
 
 
-g = Tokenizer()
-g.cut_all()
 
-tf_idf = TFIDF(g.post_pool,'./Chinese-stop-words.txt',g.dict_list)
-tf_idf.remove_stop_words()
-tf_idf.get_tfidf()
-#for k,v in tf_idf.get_tfidf().items():
-    #print 'File: '+k
- #   for word, value in v.items():
-  #      print word+' '+str(value)+'\n'
+if __name__ == '__main__':
+    token = Tokenizer()
+    token.cut_all()
+    tf_idf = TFIDF(token.post_pool,'./Chinese-stop-words.txt',token.dict_list)
+    tf_idf.remove_stop_words()
+    tf_idf.get_sparse_tfidf()
+
+
 
 
 

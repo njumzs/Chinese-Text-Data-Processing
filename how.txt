@@ -1,0 +1,2428 @@
+Stock.txt
+JobExpress.txt
+FleaMarket.txt
+Girls.txt
+Mobile.txt
+Basketball.txt
+D_Computer.txt
+V_Suggestions.txt
+WorldFootball.txt
+WarAndPeace.txt
+1630
+349045
+word ,
+
+word ?
+
+word 、
+
+word 。
+
+word “
+
+word ”
+
+word 《
+
+word 》
+
+word ！
+
+word ，
+
+word ：
+
+word ；
+
+word ？
+
+word 人民
+
+word 末##末
+
+word 啊
+
+word 阿
+
+word 哎
+
+word 哎呀
+
+word 哎哟
+
+word 唉
+
+word 俺
+
+word 俺们
+
+word 按
+
+word 按照
+
+word 吧
+
+word 吧哒
+
+word 把
+
+word 罢了
+
+word 被
+
+word 本
+
+word 本着
+
+word 比
+
+word 比方
+
+word 比如
+
+word 鄙人
+
+word 彼
+
+word 彼此
+
+word 边
+
+word 别
+
+word 别的
+
+word 别说
+
+word 并
+
+word 并且
+
+word 不比
+
+word 不成
+
+word 不单
+
+word 不但
+
+word 不独
+
+word 不管
+
+word 不光
+
+word 不过
+
+word 不仅
+
+word 不拘
+
+word 不论
+
+word 不怕
+
+word 不然
+
+word 不如
+
+word 不特
+
+word 不惟
+
+word 不问
+
+word 不只
+
+word 朝
+
+word 朝着
+
+word 趁
+
+word 趁着
+
+word 乘
+
+word 冲
+
+word 除
+
+word 除此之外
+
+word 除非
+
+word 除了
+
+word 此
+
+word 此间
+
+word 此外
+
+word 从
+
+word 从而
+
+word 打
+
+word 待
+
+word 但
+
+word 但是
+
+word 当
+
+word 当着
+
+word 到
+
+word 得
+
+word 的
+
+word 的话
+
+word 等
+
+word 等等
+
+word 地
+
+word 第
+
+word 叮咚
+
+word 对
+
+word 对于
+
+word 多
+
+word 多少
+
+word 而
+
+word 而况
+
+word 而且
+
+word 而是
+
+word 而外
+
+word 而言
+
+word 而已
+
+word 尔后
+
+word 反过来
+
+word 反过来说
+
+word 反之
+
+word 非但
+
+word 非徒
+
+word 否则
+
+word 嘎
+
+word 嘎登
+
+word 该
+
+word 赶
+
+word 个
+
+word 各
+
+word 各个
+
+word 各位
+
+word 各种
+
+word 各自
+
+word 给
+
+word 根据
+
+word 跟
+
+word 故
+
+word 故此
+
+word 固然
+
+word 关于
+
+word 管
+
+word 归
+
+word 果然
+
+word 果真
+
+word 过
+
+word 哈
+
+word 哈哈
+
+word 呵
+
+word 和
+
+word 何
+
+word 何处
+
+word 何况
+
+word 何时
+
+word 嘿
+
+word 哼
+
+word 哼唷
+
+word 呼哧
+
+word 乎
+
+word 哗
+
+word 还是
+
+word 还有
+
+word 换句话说
+
+word 换言之
+
+word 或
+
+word 或是
+
+word 或者
+
+word 极了
+
+word 及
+
+word 及其
+
+word 及至
+
+word 即
+
+word 即便
+
+word 即或
+
+word 即令
+
+word 即若
+
+word 即使
+
+word 几
+
+word 几时
+
+word 己
+
+word 既
+
+word 既然
+
+word 既是
+
+word 继而
+
+word 加之
+
+word 假如
+
+word 假若
+
+word 假使
+
+word 鉴于
+
+word 将
+
+word 较
+
+word 较之
+
+word 叫
+
+word 接着
+
+word 结果
+
+word 借
+
+word 紧接着
+
+word 进而
+
+word 尽
+
+word 尽管
+
+word 经
+
+word 经过
+
+word 就
+
+word 就是
+
+word 就是说
+
+word 据
+
+word 具体地说
+
+word 具体说来
+
+word 开始
+
+word 开外
+
+word 靠
+
+word 咳
+
+word 可
+
+word 可见
+
+word 可是
+
+word 可以
+
+word 况且
+
+word 啦
+
+word 来
+
+word 来着
+
+word 离
+
+word 例如
+
+word 哩
+
+word 连
+
+word 连同
+
+word 两者
+
+word 了
+
+word 临
+
+word 另
+
+word 另外
+
+word 另一方面
+
+word 论
+
+word 嘛
+
+word 吗
+
+word 慢说
+
+word 漫说
+
+word 冒
+
+word 么
+
+word 每
+
+word 每当
+
+word 们
+
+word 莫若
+
+word 某
+
+word 某个
+
+word 某些
+
+word 拿
+
+word 哪
+
+word 哪边
+
+word 哪儿
+
+word 哪个
+
+word 哪里
+
+word 哪年
+
+word 哪怕
+
+word 哪天
+
+word 哪些
+
+word 哪样
+
+word 那
+
+word 那边
+
+word 那儿
+
+word 那个
+
+word 那会儿
+
+word 那里
+
+word 那么
+
+word 那么些
+
+word 那么样
+
+word 那时
+
+word 那些
+
+word 那样
+
+word 乃
+
+word 乃至
+
+word 呢
+
+word 能
+
+word 你
+
+word 你们
+
+word 您
+
+word 宁
+
+word 宁可
+
+word 宁肯
+
+word 宁愿
+
+word 哦
+
+word 呕
+
+word 啪达
+
+word 旁人
+
+word 呸
+
+word 凭
+
+word 凭借
+
+word 其
+
+word 其次
+
+word 其二
+
+word 其他
+
+word 其它
+
+word 其一
+
+word 其余
+
+word 其中
+
+word 起
+
+word 起见
+
+word 岂但
+
+word 恰恰相反
+
+word 前后
+
+word 前者
+
+word 且
+
+word 然而
+
+word 然后
+
+word 然则
+
+word 让
+
+word 人家
+
+word 任
+
+word 任何
+
+word 任凭
+
+word 如
+
+word 如此
+
+word 如果
+
+word 如何
+
+word 如其
+
+word 如若
+
+word 如上所述
+
+word 若
+
+word 若非
+
+word 若是
+
+word 啥
+
+word 上下
+
+word 尚且
+
+word 设若
+
+word 设使
+
+word 甚而
+
+word 甚么
+
+word 甚至
+
+word 省得
+
+word 时候
+
+word 什么
+
+word 什么样
+
+word 使得
+
+word 是
+
+word 是的
+
+word 首先
+
+word 谁
+
+word 谁知
+
+word 顺
+
+word 顺着
+
+word 似的
+
+word 虽
+
+word 虽然
+
+word 虽说
+
+word 虽则
+
+word 随
+
+word 随着
+
+word 所
+
+word 所以
+
+word 他
+
+word 他们
+
+word 他人
+
+word 它
+
+word 它们
+
+word 她
+
+word 她们
+
+word 倘
+
+word 倘或
+
+word 倘然
+
+word 倘若
+
+word 倘使
+
+word 腾
+
+word 替
+
+word 通过
+
+word 同
+
+word 同时
+
+word 哇
+
+word 万一
+
+word 往
+
+word 望
+
+word 为
+
+word 为何
+
+word 为了
+
+word 为什么
+
+word 为着
+
+word 喂
+
+word 嗡嗡
+
+word 我
+
+word 我们
+
+word 呜
+
+word 呜呼
+
+word 乌乎
+
+word 无论
+
+word 无宁
+
+word 毋宁
+
+word 嘻
+
+word 吓
+
+word 相对而言
+
+word 像
+
+word 向
+
+word 向着
+
+word 嘘
+
+word 呀
+
+word 焉
+
+word 沿
+
+word 沿着
+
+word 要
+
+word 要不
+
+word 要不然
+
+word 要不是
+
+word 要么
+
+word 要是
+
+word 也
+
+word 也罢
+
+word 也好
+
+word 一
+
+word 一般
+
+word 一旦
+
+word 一方面
+
+word 一来
+
+word 一切
+
+word 一样
+
+word 一则
+
+word 依
+
+word 依照
+
+word 矣
+
+word 以
+
+word 以便
+
+word 以及
+
+word 以免
+
+word 以至
+
+word 以至于
+
+word 以致
+
+word 抑或
+
+word 因
+
+word 因此
+
+word 因而
+
+word 因为
+
+word 哟
+
+word 用
+
+word 由
+
+word 由此可见
+
+word 由于
+
+word 有
+
+word 有的
+
+word 有关
+
+word 有些
+
+word 又
+
+word 于
+
+word 于是
+
+word 于是乎
+
+word 与
+
+word 与此同时
+
+word 与否
+
+word 与其
+
+word 越是
+
+word 云云
+
+word 哉
+
+word 再说
+
+word 再者
+
+word 在
+
+word 在下
+
+word 咱
+
+word 咱们
+
+word 则
+
+word 怎
+
+word 怎么
+
+word 怎么办
+
+word 怎么样
+
+word 怎样
+
+word 咋
+
+word 照
+
+word 照着
+
+word 者
+
+word 这
+
+word 这边
+
+word 这儿
+
+word 这个
+
+word 这会儿
+
+word 这就是说
+
+word 这里
+
+word 这么
+
+word 这么点儿
+
+word 这么些
+
+word 这么样
+
+word 这时
+
+word 这些
+
+word 这样
+
+word 正如
+
+word 吱
+
+word 之
+
+word 之类
+
+word 之所以
+
+word 之一
+
+word 只是
+
+word 只限
+
+word 只要
+
+word 只有
+
+word 至
+
+word 至于
+
+word 诸位
+
+word 着
+
+word 着呢
+
+word 自
+
+word 自从
+
+word 自个儿
+
+word 自各儿
+
+word 自己
+
+word 自家
+
+word 自身
+
+word 综上所述
+
+word 总的来看
+
+word 总的来说
+
+word 总的说来
+
+word 总而言之
+
+word 总之
+
+word 纵
+
+word 纵令
+
+word 纵然
+
+word 纵使
+
+word 遵照
+
+word 作为
+
+word 兮
+
+word 呃
+
+word 呗
+
+word 咚
+
+word 咦
+
+word 喏
+
+word 啐
+
+word 喔唷
+
+word 嗬
+
+word 嗯
+
+word 嗳
+
+word ~
+
+word !
+
+word .
+
+word :
+
+word "
+
+word '
+
+word (
+
+word )
+
+word *
+
+word A
+
+word 白
+
+word 社会主义
+
+word --
+
+word ..
+
+word >>
+
+word  [
+
+word  ]
+
+word 
+
+word <
+
+word >
+
+word /
+
+word \
+
+word |
+
+word -
+
+word _
+
+word +
+
+word =
+
+word &
+
+word ^
+
+word %
+
+word #
+
+word @
+
+word `
+
+word ;
+
+word $
+
+word （
+
+word ）
+
+word ——
+
+word —
+
+word ￥
+
+word ·
+
+word ...
+
+word ‘
+
+word ’
+
+word 〉
+
+word 〈
+
+word …
+
+word 　
+
+word 0
+
+word 1
+
+word 2
+
+word 3
+
+word 4
+
+word 5
+
+word 6
+
+word 7
+
+word 8
+
+word 9
+
+word ０
+
+word １
+
+word ２
+
+word ３
+
+word ４
+
+word ５
+
+word ６
+
+word ７
+
+word ８
+
+word ９
+
+word 二
+
+word 三
+
+word 四
+
+word 五
+
+word 六
+
+word 七
+
+word 八
+
+word 九
+
+word 零
+
+word ＞
+
+word ＜
+
+word ＠
+
+word ＃
+
+word ＄
+
+word ％
+
+word ︿
+
+word ＆
+
+word ＊
+
+word ＋
+
+word ～
+
+word ｜
+
+word ［
+
+word ］
+
+word ｛
+
+word ｝
+
+word 啊哈
+
+word 啊呀
+
+word 啊哟
+
+word 挨次
+
+word 挨个
+
+word 挨家挨户
+
+word 挨门挨户
+
+word 挨门逐户
+
+word 挨着
+
+word 按理
+
+word 按期
+
+word 按时
+
+word 按说
+
+word 暗地里
+
+word 暗中
+
+word 暗自
+
+word 昂然
+
+word 八成
+
+word 白白
+
+word 半
+
+word 梆
+
+word 保管
+
+word 保险
+
+word 饱
+
+word 背地里
+
+word 背靠背
+
+word 倍感
+
+word 倍加
+
+word 本人
+
+word 本身
+
+word 甭
+
+word 比起
+
+word 比如说
+
+word 比照
+
+word 毕竟
+
+word 必
+
+word 必定
+
+word 必将
+
+word 必须
+
+word 便
+
+word 别人
+
+word 并非
+
+word 并肩
+
+word 并没
+
+word 并没有
+
+word 并排
+
+word 并无
+
+word 勃然
+
+word 不
+
+word 不必
+
+word 不常
+
+word 不大
+
+word 不但...而且
+
+word 不得
+
+word 不得不
+
+word 不得了
+
+word 不得已
+
+word 不迭
+
+word 不定
+
+word 不对
+
+word 不妨
+
+word 不管怎样
+
+word 不会
+
+word 不仅...而且
+
+word 不仅仅
+
+word 不仅仅是
+
+word 不经意
+
+word 不可开交
+
+word 不可抗拒
+
+word 不力
+
+word 不了
+
+word 不料
+
+word 不满
+
+word 不免
+
+word 不能不
+
+word 不起
+
+word 不巧
+
+word 不然的话
+
+word 不日
+
+word 不少
+
+word 不胜
+
+word 不时
+
+word 不是
+
+word 不同
+
+word 不能
+
+word 不要
+
+word 不外
+
+word 不外乎
+
+word 不下
+
+word 不限
+
+word 不消
+
+word 不已
+
+word 不亦乐乎
+
+word 不由得
+
+word 不再
+
+word 不择手段
+
+word 不怎么
+
+word 不曾
+
+word 不知不觉
+
+word 不止
+
+word 不止一次
+
+word 不至于
+
+word 才
+
+word 才能
+
+word 策略地
+
+word 差不多
+
+word 差一点
+
+word 常
+
+word 常常
+
+word 常言道
+
+word 常言说
+
+word 常言说得好
+
+word 长此下去
+
+word 长话短说
+
+word 长期以来
+
+word 长线
+
+word 敞开儿
+
+word 彻夜
+
+word 陈年
+
+word 趁便
+
+word 趁机
+
+word 趁热
+
+word 趁势
+
+word 趁早
+
+word 成年
+
+word 成年累月
+
+word 成心
+
+word 乘机
+
+word 乘胜
+
+word 乘势
+
+word 乘隙
+
+word 乘虚
+
+word 诚然
+
+word 迟早
+
+word 充分
+
+word 充其极
+
+word 充其量
+
+word 抽冷子
+
+word 臭
+
+word 初
+
+word 出
+
+word 出来
+
+word 出去
+
+word 除此
+
+word 除此而外
+
+word 除此以外
+
+word 除开
+
+word 除去
+
+word 除却
+
+word 除外
+
+word 处处
+
+word 川流不息
+
+word 传
+
+word 传说
+
+word 传闻
+
+word 串行
+
+word 纯
+
+word 纯粹
+
+word 此后
+
+word 此中
+
+word 次第
+
+word 匆匆
+
+word 从不
+
+word 从此
+
+word 从此以后
+
+word 从古到今
+
+word 从古至今
+
+word 从今以后
+
+word 从宽
+
+word 从来
+
+word 从轻
+
+word 从速
+
+word 从头
+
+word 从未
+
+word 从无到有
+
+word 从小
+
+word 从新
+
+word 从严
+
+word 从优
+
+word 从早到晚
+
+word 从中
+
+word 从重
+
+word 凑巧
+
+word 粗
+
+word 存心
+
+word 达旦
+
+word 打从
+
+word 打开天窗说亮话
+
+word 大
+
+word 大不了
+
+word 大大
+
+word 大抵
+
+word 大都
+
+word 大多
+
+word 大凡
+
+word 大概
+
+word 大家
+
+word 大举
+
+word 大略
+
+word 大面儿上
+
+word 大事
+
+word 大体
+
+word 大体上
+
+word 大约
+
+word 大张旗鼓
+
+word 大致
+
+word 呆呆地
+
+word 带
+
+word 殆
+
+word 待到
+
+word 单
+
+word 单纯
+
+word 单单
+
+word 但愿
+
+word 弹指之间
+
+word 当场
+
+word 当儿
+
+word 当即
+
+word 当口儿
+
+word 当然
+
+word 当庭
+
+word 当头
+
+word 当下
+
+word 当真
+
+word 当中
+
+word 倒不如
+
+word 倒不如说
+
+word 倒是
+
+word 到处
+
+word 到底
+
+word 到了儿
+
+word 到目前为止
+
+word 到头
+
+word 到头来
+
+word 得起
+
+word 得天独厚
+
+word 的确
+
+word 等到
+
+word 叮当
+
+word 顶多
+
+word 定
+
+word 动不动
+
+word 动辄
+
+word 陡然
+
+word 都
+
+word 独
+
+word 独自
+
+word 断然
+
+word 顿时
+
+word 多次
+
+word 多多
+
+word 多多少少
+
+word 多多益善
+
+word 多亏
+
+word 多年来
+
+word 多年前
+
+word 而后
+
+word 而论
+
+word 而又
+
+word 尔等
+
+word 二话不说
+
+word 二话没说
+
+word 反倒
+
+word 反倒是
+
+word 反而
+
+word 反手
+
+word 反之亦然
+
+word 反之则
+
+word 方
+
+word 方才
+
+word 方能
+
+word 放量
+
+word 非常
+
+word 非得
+
+word 分期
+
+word 分期分批
+
+word 分头
+
+word 奋勇
+
+word 愤然
+
+word 风雨无阻
+
+word 逢
+
+word 弗
+
+word 甫
+
+word 嘎嘎
+
+word 该当
+
+word 概
+
+word 赶快
+
+word 赶早不赶晚
+
+word 敢
+
+word 敢情
+
+word 敢于
+
+word 刚
+
+word 刚才
+
+word 刚好
+
+word 刚巧
+
+word 高低
+
+word 格外
+
+word 隔日
+
+word 隔夜
+
+word 个人
+
+word 各式
+
+word 更
+
+word 更加
+
+word 更进一步
+
+word 更为
+
+word 公然
+
+word 共
+
+word 共总
+
+word 够瞧的
+
+word 姑且
+
+word 古来
+
+word 故而
+
+word 故意
+
+word 固
+
+word 怪
+
+word 怪不得
+
+word 惯常
+
+word 光
+
+word 光是
+
+word 归根到底
+
+word 归根结底
+
+word 过于
+
+word 毫不
+
+word 毫无
+
+word 毫无保留地
+
+word 毫无例外
+
+word 好在
+
+word 何必
+
+word 何尝
+
+word 何妨
+
+word 何苦
+
+word 何乐而不为
+
+word 何须
+
+word 何止
+
+word 很
+
+word 很多
+
+word 很少
+
+word 轰然
+
+word 后来
+
+word 呼啦
+
+word 忽地
+
+word 忽然
+
+word 互
+
+word 互相
+
+word 哗啦
+
+word 话说
+
+word 还
+
+word 恍然
+
+word 会
+
+word 豁然
+
+word 活
+
+word 伙同
+
+word 或多或少
+
+word 或许
+
+word 基本
+
+word 基本上
+
+word 基于
+
+word 极
+
+word 极大
+
+word 极度
+
+word 极端
+
+word 极力
+
+word 极其
+
+word 极为
+
+word 急匆匆
+
+word 即将
+
+word 即刻
+
+word 即是说
+
+word 几度
+
+word 几番
+
+word 几乎
+
+word 几经
+
+word 既...又
+
+word 继之
+
+word 加上
+
+word 加以
+
+word 间或
+
+word 简而言之
+
+word 简言之
+
+word 简直
+
+word 见
+
+word 将才
+
+word 将近
+
+word 将要
+
+word 交口
+
+word 较比
+
+word 较为
+
+word 接连不断
+
+word 接下来
+
+word 皆可
+
+word 截然
+
+word 截至
+
+word 藉以
+
+word 借此
+
+word 借以
+
+word 届时
+
+word 仅
+
+word 仅仅
+
+word 谨
+
+word 进来
+
+word 进去
+
+word 近
+
+word 近几年来
+
+word 近来
+
+word 近年来
+
+word 尽管如此
+
+word 尽可能
+
+word 尽快
+
+word 尽量
+
+word 尽然
+
+word 尽如人意
+
+word 尽心竭力
+
+word 尽心尽力
+
+word 尽早
+
+word 精光
+
+word 经常
+
+word 竟
+
+word 竟然
+
+word 究竟
+
+word 就此
+
+word 就地
+
+word 就算
+
+word 居然
+
+word 局外
+
+word 举凡
+
+word 据称
+
+word 据此
+
+word 据实
+
+word 据说
+
+word 据我所知
+
+word 据悉
+
+word 具体来说
+
+word 决不
+
+word 决非
+
+word 绝
+
+word 绝不
+
+word 绝顶
+
+word 绝对
+
+word 绝非
+
+word 均
+
+word 喀
+
+word 看
+
+word 看来
+
+word 看起来
+
+word 看上去
+
+word 看样子
+
+word 可好
+
+word 可能
+
+word 恐怕
+
+word 快
+
+word 快要
+
+word 来不及
+
+word 来得及
+
+word 来讲
+
+word 来看
+
+word 拦腰
+
+word 牢牢
+
+word 老
+
+word 老大
+
+word 老老实实
+
+word 老是
+
+word 累次
+
+word 累年
+
+word 理当
+
+word 理该
+
+word 理应
+
+word 历
+
+word 立
+
+word 立地
+
+word 立刻
+
+word 立马
+
+word 立时
+
+word 联袂
+
+word 连连
+
+word 连日
+
+word 连日来
+
+word 连声
+
+word 连袂
+
+word 临到
+
+word 另方面
+
+word 另行
+
+word 另一个
+
+word 路经
+
+word 屡
+
+word 屡次
+
+word 屡次三番
+
+word 屡屡
+
+word 缕缕
+
+word 率尔
+
+word 率然
+
+word 略
+
+word 略加
+
+word 略微
+
+word 略为
+
+word 论说
+
+word 马上
+
+word 蛮
+
+word 满
+
+word 没
+
+word 没有
+
+word 每逢
+
+word 每每
+
+word 每时每刻
+
+word 猛然
+
+word 猛然间
+
+word 莫
+
+word 莫不
+
+word 莫非
+
+word 莫如
+
+word 默默地
+
+word 默然
+
+word 呐
+
+word 那末
+
+word 奈
+
+word 难道
+
+word 难得
+
+word 难怪
+
+word 难说
+
+word 内
+
+word 年复一年
+
+word 凝神
+
+word 偶而
+
+word 偶尔
+
+word 怕
+
+word 砰
+
+word 碰巧
+
+word 譬如
+
+word 偏偏
+
+word 乒
+
+word 平素
+
+word 颇
+
+word 迫于
+
+word 扑通
+
+word 其后
+
+word 其实
+
+word 奇
+
+word 齐
+
+word 起初
+
+word 起来
+
+word 起首
+
+word 起头
+
+word 起先
+
+word 岂
+
+word 岂非
+
+word 岂止
+
+word 迄
+
+word 恰逢
+
+word 恰好
+
+word 恰恰
+
+word 恰巧
+
+word 恰如
+
+word 恰似
+
+word 千
+
+word 千万
+
+word 千万千万
+
+word 切
+
+word 切不可
+
+word 切莫
+
+word 切切
+
+word 切勿
+
+word 窃
+
+word 亲口
+
+word 亲身
+
+word 亲手
+
+word 亲眼
+
+word 亲自
+
+word 顷
+
+word 顷刻
+
+word 顷刻间
+
+word 顷刻之间
+
+word 请勿
+
+word 穷年累月
+
+word 取道
+
+word 去
+
+word 权时
+
+word 全都
+
+word 全力
+
+word 全年
+
+word 全然
+
+word 全身心
+
+word 然
+
+word 人人
+
+word 仍
+
+word 仍旧
+
+word 仍然
+
+word 日复一日
+
+word 日见
+
+word 日渐
+
+word 日益
+
+word 日臻
+
+word 如常
+
+word 如此等等
+
+word 如次
+
+word 如今
+
+word 如期
+
+word 如前所述
+
+word 如上
+
+word 如下
+
+word 汝
+
+word 三番两次
+
+word 三番五次
+
+word 三天两头
+
+word 瑟瑟
+
+word 沙沙
+
+word 上
+
+word 上来
+
+word 上去
+
