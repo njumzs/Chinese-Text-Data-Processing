@@ -5,7 +5,7 @@
 #Created:       26 Sept 2015                                               #
 #Last Modified: 9 Oct 2015                                                 #
 #Version:   1.0                                                            #
-#Description: Tokenize posts from Lily BBS from NJU with help of jieba.    #
+#Description: Tokenize posts from Lily BBS of NJU with help of jieba.    #
 #             Extract TF-IDF features.                                     #
 ############################################################################
 import sys,os
@@ -116,8 +116,9 @@ class TFIDF(KeywordExtractor):
             #print str(index)+'/'+str(len(self.post_pool))+' is computing'
             post_tfidf = {}
             word_counter = Counter(v)
+            number = len(v)
             for word in word_counter:
-                post_tfidf[word] = round(word_counter.get(word,0.0)*math.log(len(self.post_pool)/(word_doc_freq.get(word,0.0)+1.0)),4)
+                post_tfidf[word] = round(((word_counter.get(word,0.0)*1.0)/number)*math.log((len(self.post_pool)*1.0)/(word_doc_freq.get(word,0.0)+1.0)),4)
             tf_idf[k] = post_tfidf
          #   index += 1
         return tf_idf
@@ -148,8 +149,8 @@ class TFIDF(KeywordExtractor):
         #Detele any existing result files or dirs
         for per_file in file_list:
             if os.path.isfile(result_dir+per_file):
-                if not 'dict_index' in per_file:
-                    os.remove(result_dir+per_file)
+             #   if not 'dict_index' in per_file:
+                os.remove(result_dir+per_file)
             elif os.path.isdir(result_dir+per_file):
                 shutil.rmtree(result_dir+per_file,True)
         #generate new result files
@@ -169,14 +170,14 @@ class TFIDF(KeywordExtractor):
 if __name__ == '__main__':
     start = time.clock()
     token = Tokenizer()
-    print 'Step_1: Tokenizing...'
+    print '--------Step_1: Tokenizing...-------'
     token.cut_all()
-    print 'Step_2: Delete the stop words...'
+    print '--------Step_2: Delete the stop words...--------'
     tf_idf = TFIDF(token.post_pool,'./Chinese-stop-words.txt')
     tf_idf.remove_stop_words()
-    print 'Step_3: Extract the TFIDF vector... '
+    print '--------Step_3: Extract the TFIDF vector...-------- '
     tfidf_result = tf_idf.get_sparse_tfidf()
-    print 'Step_4: Export the result to specified files...'
-    tf_idf.export_2_file('./result/',tfidf_result)
+    print '--------Step_4: Export the result to specified files...--------'
+    tf_idf.export_2_file('../result/',tfidf_result)
     end = time.clock()
-    print 'Conduction Report: compute successfully in total time of %fs' % (end - start)
+    print 'Conduction report: compute successfully in total time of %fs' % (end - start)
