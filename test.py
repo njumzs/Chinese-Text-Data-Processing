@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 #-*- coding=utf-8 -*-
 ############################################################################
-#Author:        Zhanshuai Meng
-#Created:       26 Sept 2015
-#Last Modified: 9 Oct 2015
-#Version:   1.0
-#Description: Tokenize posts from Lily BBS from NJU with help of jieba.
-#             Extract TF-IDF features.
+#Author:        Zhanshuai Meng                                             #
+#Created:       26 Sept 2015                                               #
+#Last Modified: 9 Oct 2015                                                 #
+#Version:   1.0                                                            #
+#Description: Tokenize posts from Lily BBS from NJU with help of jieba.    #
+#             Extract TF-IDF features.                                     #
 ############################################################################
 import sys,os
 import jieba
@@ -180,5 +180,3 @@ if __name__ == '__main__':
     tf_idf.export_2_file('./result/',tfidf_result)
     end = time.clock()
     print 'Conduction Report: compute successfully in total time of %fs' % (end - start)
-
-
