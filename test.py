@@ -8,6 +8,8 @@ import jieba
 import codecs
 import jieba.analyse
 import math
+import shutil
+import time
 sys.path.append('../')
 
 from optparse import OptionParser
@@ -30,11 +32,11 @@ class Tokenizer():
         self.data_source_dir = data_source_dir
         self.file_list = os.listdir(self.data_source_dir)
         self.post_pool = {}
-        self.dict_list = []
+        #self.dict_list = []
 
     def cut_all(self):
         for file in self.file_list:
-            print file
+         #   print file
             if os.path.isfile(self.data_source_dir+file):
                 post_index = 0
                 content = codecs.open(self.data_source_dir+file,'rw','utf-8')
@@ -44,10 +46,14 @@ class Tokenizer():
                     #print content_line
                     seg_list = jieba.lcut(content_line.strip(),cut_all=False)
                     post_index += 1
-                    self.post_pool[file+' '+str(post_index)] = seg_list
+                    post_index_str = str(post_index)
+                    if post_index <= 9:
+                        post_index_str = '00'+str(post_index)
+                    elif post_index <= 99:
+                        post_index_str = '0'+str(post_index)
+                    self.post_pool[file+' '+post_index_str] = seg_list
                 content.close()
-        # 1630 post
-        self.dict_list = [key for key in jieba.dt.FREQ if not jieba.dt.FREQ[key] == 0]
+       # self.dict_list = [key for key in jieba.dt.FREQ if not jieba.dt.FREQ[key] == 0]
 
 
 class KeywordExtrator(object):
@@ -64,14 +70,14 @@ class KeywordExtrator(object):
 
 
 class TFIDF(KeywordExtrator):
-    def __init__(self,post_pool,stop_words_path,dict_list):
+    def __init__(self,post_pool,stop_words_path):
         KeywordExtrator.__init__(self)
         self.post_pool = post_pool
         KeywordExtrator.set_stop_words(self,stop_words_path)
         self.idf_freq = {}
         self.tf_freq = {}
         self.dict_map = {}
-        self.dict_list = dict_list
+        self.dict_list = {}
 
     def remove_stop_words(self):
         dict_set = set([])
@@ -80,7 +86,7 @@ class TFIDF(KeywordExtrator):
             dict_set.update(words_list)
             self.post_pool[k] = words_list
         self.dict_list = list(dict_set)
-        print 'dict_len'+str(len(self.dict_list))
+        #print 'dict_len'+str(len(self.dict_list))
 
     def __get_dict_map(self):
         for i, value in enumerate(self.dict_list):
@@ -101,11 +107,10 @@ class TFIDF(KeywordExtrator):
                 word_doc_freq[word] += 1
 
         for k,v in self.post_pool.items():
-            print str(index)+'/'+str(len(self.post_pool))+' is computing'
+            #print str(index)+'/'+str(len(self.post_pool))+' is computing'
             post_tfidf = {}
             word_counter = Counter(v)
             for word in word_counter:
-            #    print str(word_counter.get(word,0.0))+' '+str(word_doc_freq.get(word,0.0))
                 post_tfidf[word] = round(word_counter.get(word,0.0)*math.log(len(self.post_pool)/(word_doc_freq.get(word,0.0)+1.0)),4)
             tf_idf[k] = post_tfidf
             index += 1
@@ -114,7 +119,7 @@ class TFIDF(KeywordExtrator):
     def get_sparse_tfidf(self):
         self.__get_dict_map()
         tf_idf = self.__cal_tfidf()
-        print 'cal tfidf over'
+        print 'calculate tfidf over'
         sparse_tf_idf = {}
         for post_name, tfidf in tf_idf.items():
             word_tf_idf = {}
@@ -124,14 +129,30 @@ class TFIDF(KeywordExtrator):
             sparse_tf_idf[post_name] = word_tf_idf_sorted
         sparse_tfidf_sorted = sorted(sparse_tf_idf.iteritems(), key=lambda d:d[0])
         return sparse_tfidf_sorted
+    def export_dict(self,result_dir):
+        with open(result_dir+'dict_index.txt','a') as f:
+            for i, value in enumerate(self.dict_list):
+                f.write(str(i)+': '+value+'\n')
+
+
 
     def export_2_file(self,result_dir,tfidf_result):
-        for k,v in tfidf_result.items():
+        file_list = os.listdir(result_dir)
+        #Detele any existing result files or dirs
+        for per_file in file_list:
+            if os.path.isfile(result_dir+per_file):
+                if not 'dict_index' in per_file:
+                    os.remove(result_dir+per_file)
+            elif os.path.isdir(result_dir+per_file):
+                shutil.rmtree(result_dir+per_file,True)
+        #generate new result files
+        #self.export_dict(result_dir)
+        for k,v in tfidf_result:
             post = k.split(' ')
-            with open(result_dir+post[0],'w') as f:
+            with open(result_dir+post[0],'a') as f:
                 f.write('post '+post[1]+': ')
                 for index,tfidf in v:
-                    f.write('<'+str(index)+'> '+'<'+str(tfidf)+'>   ')
+                    f.write('<'+str(index)+'>:'+'<'+str(tfidf)+'>   ')
                 f.write('\n')
 
 
@@ -139,17 +160,19 @@ class TFIDF(KeywordExtrator):
 
 
 if __name__ == '__main__':
+    start = time.clock()
     token = Tokenizer()
     print 'Step_1: Tokenizing...'
     token.cut_all()
     print 'Step_2: Delete the stop words...'
-    tf_idf = TFIDF(token.post_pool,'./Chinese-stop-words.txt',token.dict_list)
+    tf_idf = TFIDF(token.post_pool,'./Chinese-stop-words.txt')
     tf_idf.remove_stop_words()
-    print 'Step_3: Extrat the TFIDF vector... '
+    print 'Step_3: Extract the TFIDF vector... '
     tfidf_result = tf_idf.get_sparse_tfidf()
     print 'Step_4: Export the result to specified files...'
     tf_idf.export_2_file('./result/',tfidf_result)
-    print 'Conclusion: compute over'
+    end = time.clock()
+    print 'Conduction Report: compute successfull in total time of %fs' % (end - start)
 
 
 
