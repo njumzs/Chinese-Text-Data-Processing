@@ -150,7 +150,7 @@ class TFIDF(KeywordExtrator):
         for k,v in tfidf_result:
             post = k.split(' ')
             with open(result_dir+post[0],'a') as f:
-                f.write('post '+post[1]+': ')
+                f.write('post '+post[1].lstrip('0')+': ')
                 for index,tfidf in v:
                     f.write('<'+str(index)+'>:'+'<'+str(tfidf)+'>   ')
                 f.write('\n')
@@ -172,7 +172,7 @@ if __name__ == '__main__':
     print 'Step_4: Export the result to specified files...'
     tf_idf.export_2_file('./result/',tfidf_result)
     end = time.clock()
-    print 'Conduction Report: compute successfull in total time of %fs' % (end - start)
+    print 'Conduction Report: compute successfully in total time of %fs' % (end - start)
 
 
 
